@@ -1,26 +1,12 @@
 package lab;
 
-import com.fasterxml.jackson.databind.deser.DataFormatReaders;
 import com.recombee.api_client.RecombeeClient;
 import com.recombee.api_client.api_requests.AddItemProperty;
-import com.recombee.api_client.api_requests.ResetDatabase;
 import com.recombee.api_client.api_requests.SetItemValues;
-import com.recombee.api_client.exceptions.ApiException;
 import com.recombee.api_client.util.Region;
 
-import java.io.BufferedReader;
-import java.io.IOError;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class RecombeeScript {
 
@@ -50,7 +36,7 @@ public class RecombeeScript {
                             put("type", movie.getType());
                             put("title", movie.getTitle());
                             put("director", movie.getDirector());
-                            put("country", movie.getCountry());
+                            put("country", movie.getRelease_country());
                             put("releaseYear", movie.getReleaseYear());
                             put("rating", movie.getRating());
                             put("listed_in", movie.getListed_in());

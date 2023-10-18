@@ -3,9 +3,6 @@ package lab;
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvBindByPosition;
 
-import java.time.LocalDate;
-import java.util.Date;
-
 public class NetflixMovie {
     @CsvBindByPosition(position = 0)
     String showId;
@@ -16,7 +13,7 @@ public class NetflixMovie {
     @CsvBindByPosition(position = 3)
     String director;
     @CsvBindByPosition(position = 4)
-    String country;
+    String release_country;
     @CsvBindByPosition(position = 5)
     String releaseYear;
     @CsvBindByPosition(position = 6)
@@ -61,12 +58,12 @@ public class NetflixMovie {
         this.director = director;
     }
 
-    public String getCountry() {
-        return country;
+    public String getRelease_country() {
+        return release_country;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
+    public void setRelease_country(String release_country) {
+        this.release_country = release_country;
     }
 
     public String getReleaseYear() {
@@ -108,7 +105,7 @@ public class NetflixMovie {
                 ", type='" + type + '\'' +
                 ", title='" + title + '\'' +
                 ", director='" + director + '\'' +
-                ", country='" + country + '\'' +
+                ", country='" + release_country + '\'' +
                 ", releaseYear='" + releaseYear + '\'' +
                 ", rating='" + rating + '\'' +
                 ", listed_in='" + listed_in + '\'' +
